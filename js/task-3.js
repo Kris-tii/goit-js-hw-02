@@ -1,11 +1,11 @@
 function checkForSpam (message) {
-    const trigger = ['spam', 'sale'];
-    for (let i = 0; i < trigger.length; i++) {
-        if (message.toLowerCase().includes(trigger[i])) {
+    const triggers = ['spam', 'sale'];
+    const lowerCaseMessage = message.toLowerCase();
+    for (let i = 0; i < triggers.length; i++) {
+        if (lowerCaseMessage.includes(triggers[i])) {
             return true;
         }
     }
-
     return false;
 }
 
